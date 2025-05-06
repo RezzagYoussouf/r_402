@@ -3,15 +3,17 @@ package com.example.demo.data;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.util.*;
-
+import static org.junit.jupiter.api.Assertions.assertEquals;
 @SpringBootTest
 public class VoitureTest {
 
     @Test
     void creerVoiture(){
-            Voiture voiture = new Voiture("AissaniMobile",5000);
+            Voiture voiture = new Voiture("AissaniMobile",500);
+            voiture.setId(95);
             assertEquals(voiture.getMarque(), "AissaniMobile");
-            assertEquals(voiture.getPrix(), 5000);
+            assertEquals(voiture.getPrix(), 500);
+            assertEquals(voiture.getId(), 95);
     }
 
 }
